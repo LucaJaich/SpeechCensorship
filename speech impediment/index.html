@@ -12,9 +12,6 @@
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
-
-
-
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
@@ -26,9 +23,9 @@
         <h5 class="header col s12 light">Una manera moderna de solucionar problemas del día a día</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Comenzar</a>
+        <button class="btn waves-effect waves-light js-start" type="submit" name="action"><i class="material-icons">play_arrow</i>  Start</button>
+  <button class="btn waves-effect waves-light js-start" type="submit" name="action"><i class="material-icons">stop</i>  Stop</button>
       </div>
-      <br><br>
 
     </div>
   </div>
@@ -43,16 +40,6 @@
 
 
   <!--  Scripts-->
-  <script>
-  var recorder = document.getElementById('recorder');
-  var player = document.getElementById('player');
-
-  recorder.addEventListener('change', function(e) {
-    var file = e.target.files[0];
-    // Do something with the audio file.
-    player.src =  URL.createObjectURL(file);
-  });
-</script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
