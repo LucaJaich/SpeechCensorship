@@ -25,7 +25,7 @@
       <div class="row center">
         <button class="btn waves-effect waves-light js-start"><i class="material-icons">play_arrow</i>  Start</button>
 
-  <button class="btn waves-effect waves-light"><i class="material-icons">stop</i>  Stop</button>
+  <button onclick="stopAndSend()" class="btn waves-effect waves-light"><i class="material-icons">stop</i>  Stop</button>
   <button class="js-stop" style="display: none;">Stop</button>
 
       </div>
@@ -50,7 +50,7 @@
   <script src="js/serverComm.js"></script>
   <script>
     function stopAndSend(){
-      document.querySelector.(".js-stop").click();
+      document.querySelector(".js-stop").click();
       setTimeout(function(){
         handle_input("word", blob);
       }, 100)

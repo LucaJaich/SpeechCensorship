@@ -49,6 +49,7 @@ const saveRecording = () => {
  */
 const startRecording = () => {
     recorder.start();
+    console.log("start recording");
 };
 
 /**
@@ -56,11 +57,11 @@ const startRecording = () => {
  */
 const stopRecording = () => {
     recorder.stop();
+    console.log("stop recording");
 };
 
 // Wait until everything has loaded
 (function() {
-    console.log("LalaA");
     audioElement = document.querySelector('.js-audio');
     startButton = document.querySelector('.js-start');
     stopButton = document.querySelector('.js-stop');

@@ -1,6 +1,6 @@
 var url = "http://127.0.0.1:5000/audio";
 
-function handle_input(input,dataType) {
+function handle_input(dataType, input) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
   var data = new FormData();
