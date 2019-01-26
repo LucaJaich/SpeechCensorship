@@ -64,8 +64,6 @@ const stopRecording = () => {
     audioElement = document.querySelector('.js-audio');
     startButton = document.querySelector('.js-start');
     stopButton = document.querySelector('.js-stop');
-    downloadButton = document.querySelector('.js-download');
-    aDownload = document.querySelector(".aDownload");
     
     // We'll get the user's audio input here.
     navigator.mediaDevices.getUserMedia({
