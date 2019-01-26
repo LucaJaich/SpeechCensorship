@@ -11,43 +11,44 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <nav>
+    <div class="nav-wrapper orange darken-3">
+        <a href="#" class="brand-logo"><i class='material-icons'>arrow_back</i>Index</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        <li><a href="sass.html">Other Projects</a></li>
+        <li><a href="badges.html">About</a></li>
+        <li><a href="collapsible.html">GitHub</a></li>
+      </ul>
     </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Record Sentence</h1>
+      <h1 class="orange-text text-darken-1 relief header center ">Record  Sentence</h1>
+        <div class="card-panel hoverable">
       <div class="row center">
         <h5 class="header col s12 light">Una manera moderna de solucionar problemas del día a día</h5>
       </div>
       <div class="row center">
-        <button class="btn waves-effect waves-light js-start"><i class="material-icons">play_arrow</i>  Start</button>
+        <button class="btn waves-effect waves-light js-start blue-grey darken-3"><i class="material-icons">play_arrow</i>  Start</button>
 
-  <button onclick="stopAndSend()" class="btn waves-effect waves-light"><i class="material-icons">stop</i>  Stop</button>
+  <button onclick="stopAndSend()" class="btn waves-effect waves-light blue-grey darken-3"><i class="material-icons">stop</i>  Stop</button>
   <button class="js-stop" style="display: none;">Stop</button>
 
       </div>
-            <div class="row center">
-        <a href="index.html"><button class="btn waves-effect waves-light ">Record Word</button></a>
+      <div class="row center">
+        <a href="word.html" ><button class="btn waves-effect waves-light blue-grey darken-3">   Record Word</button></a>
 
+      </div>
       </div>
 
     </div>
   </div>
 
 
-  
-        </div>
-      </div>
-    </div>
-
-  </footer>
-
-
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/mic.js"></script>
