@@ -5,6 +5,8 @@ import pygame
 from watson_developer_cloud import TextToSpeechV1, SpeechToTextV1
 from werkzeug.datastructures import FileStorage
 import os
+from pydub import AudioSegment
+from pydub.silence import split_on_silence
 
 
 
@@ -23,9 +25,35 @@ def analyze_word(audio):
 	file = FileStorage(audio)
 	file.save("word.wav")
 
+def analyze_sentence(audio):
+	os.system("rm sentence/*")
+		
+	file = FileStorage(audio)
+	file.save("sentence/sentence.wav")
+
+	sound_file = AudioSegment.from_wav("a-z.wav")
+	audio_chunks = split_on_silence(sound_file, 
+    # must be silent for at least half a second
+    min_silence_len=100,
+
+    # consider it silent if quieter than -16 dBFS
+    silence_thresh=-16
+	)
+
+	for i, chunk in enumerate(audio_chunks):
+
+	    out_file = ".//splitAudio//chunk{0}.wav".format(i)
+	    print("exporting", out_file)
+	    chunk.export(out_file, format="wav")
+
 @app.route("/audio", methods=['POST'])
 def manage_request():
-	analyze_word(request.files["files"])
+	if request.form["dataType"] == "word":
+		analyze_word(request.files["files"])
+
+	elif request.form["dataType"] == "sentence":
+		analyze_sentence(request.files["files"])
+
 	return json.dumps({"hola":"que onda"})
 
 app.run()
